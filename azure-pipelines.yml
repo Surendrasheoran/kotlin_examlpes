@@ -32,7 +32,6 @@ steps:
     apksignerKeystorePassword: '123456'
     apksignerKeystoreAlias: 'release_demo'
     apksignerKeyPassword: '123456'
-    apksignerArguments: --out $(Build.SourcesDirectory)/app/build/outputs/apk/release/demo_app.release.apk
     zipalign: true
 - task: ArchiveFiles@2
   inputs:
