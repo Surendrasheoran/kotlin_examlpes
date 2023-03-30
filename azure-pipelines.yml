@@ -33,14 +33,14 @@ steps:
     apksignerKeystoreAlias: 'release_demo'
     apksignerKeyPassword: '123456'
     zipalign: true
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/app/build/outputs/apk/release/'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-
 - task: CopyFiles@2
   inputs:
     SourceFolder: $(Build.SourcesDirectory)
